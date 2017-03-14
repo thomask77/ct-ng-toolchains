@@ -1,0 +1,10 @@
+*.bak
+downloads/*
+releases/*
+gcc-*/.build
+gcc-*/.config
+gcc-*/.config.old
+gcc-*/build.log
+gcc-*/config
+gcc-*/config.gen
+gcc-*/output

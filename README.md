@@ -5,10 +5,13 @@ build Windows and Linux toolchains for my personal use.
 
 ### Installation
 
-```bash
-sudo apt-get install -y autoconf gawk bison flex gperf libncurses5-dev texinfo help2man mingw-w64
+  * Tested on Ubuntu 16.04 LTS and Debian 8.7
 
-./prepare-crosstool.sh
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential automake gperf bison flex gawk libncurses5-dev python-dev texinfo help2man mingw-w64
+
+./bootstrap.sh
 ```
 
 ### How to build
@@ -16,17 +19,21 @@ sudo apt-get install -y autoconf gawk bison flex gperf libncurses5-dev texinfo h
 Build a single toolchain:
 
 ```bash
-./build-toolchain.sh  gcc-arm-socfpga_hf-eabi-linux
+./build-toolchain.sh gcc-arm-socfpga_hf-eabi-linux
 ```
 
-.. or build all of them (takes about 2 hours on a recent Core-i7 machine):
+.. or build all of them:
 
 ```bash
-./build-toolchain.sh  gcc-*
+./build-toolchain.sh gcc-*
 ```
+
+Building all toolchains requires 45 GB of disk space and will take about
+2 hours on a recent Core i7 machine.
 
 Afterwards, you will (hopefully) find nicely packaged toolchains in the
 "releases" folder.
+
 
 ## Altera SoCFPGA (Cortex-A9)
 
@@ -84,4 +91,3 @@ Mentor Graphics stopped to release Sourcery CodeBench _Lite_ in 2013
   * Reentrancy with multi-thread support
 
     ```-DREENTRANT_SYSCALLS_PROVIDED```
-

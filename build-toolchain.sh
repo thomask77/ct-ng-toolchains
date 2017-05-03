@@ -46,7 +46,7 @@ function package {
         if [[ ! -d $REL_NAME ]]; then continue; fi
 
         REL_HOST="${1/*-/}"   # win64 or linux
-        REL_DATE=$(date +%Y%m%d -r"$REL_NAME")
+        REL_DATE=$(date -r"$REL_NAME" +%Y%m%d)
 
         # Keep PDF documentation only and move to one directory
         #

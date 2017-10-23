@@ -3,9 +3,13 @@
 This repository contains Crosstool-NG configurations and helper scripts to
 build Windows and Linux toolchains for my personal use.
 
+### Changelog
+
+2017-10-22: Updated to GCC 7.2.0. Remember to re-run ```./bootstrap.sh``` when updating from an older version.
+
 ### Installation
 
-  * Tested on Ubuntu 16.04 LTS and Debian 8.7
+* Tested on Ubuntu 16.04 LTS and Debian 8.7
 
 ```bash
 sudo apt-get update
@@ -34,6 +38,15 @@ Building all toolchains requires 45 GB of disk space and will take about
 Afterwards, you will (hopefully) find nicely packaged toolchains in the
 "releases" folder.
 
+### Changing configurations
+
+Each toolchain directory has a ```defconfig```-file. To make changes, execute:
+
+```bash
+../crosstool-ng defconfig
+../crosstool-ng menuconfig
+../crosstool-ng saveconfig
+```
 
 ## Altera SoCFPGA (Cortex-A9)
 
@@ -59,7 +72,7 @@ All other prebuilt toolchains are either proprietary or outdated.
 
 * newlib options
 
-  * Reeantrancy with multi-thread and multi-_core_ support (see [10], [11]) 
+  * Reeantrancy with multi-thread and multi-_core_ support (see [10], [11])
 
     ```-DREENTRANT_SYSCALLS_PROVIDED -D__DYNAMIC_REENT__```
 
@@ -72,8 +85,7 @@ All other prebuilt toolchains are either proprietary or outdated.
 
 [10]: http://code-time.com/newlib.html
 [11]: http://code-time.com/pdf/mAbassi%20Port%20-%20SMP%20ARM%20Cortex%20A9%20-%20DS5%20(GCC).pdf
-[12]: https://github.com/mirror/newlib-cygwin/blob/master/newlib/libc/machine/arm/aeabi_memcpy-armv7a.S#L32 
-
+[12]: https://github.com/mirror/newlib-cygwin/blob/master/newlib/libc/machine/arm/aeabi_memcpy-armv7a.S#L32
 
 ## NXP LPC32xx (ARM926EJ-S)
 

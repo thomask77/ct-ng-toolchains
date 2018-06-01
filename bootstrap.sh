@@ -16,4 +16,5 @@ cd ..
 
 # Get new gcc releases
 #
-wget -cP downloads https://ftp.gnu.org/gnu/gcc/gcc-7.2.0/gcc-7.2.0.tar.xz
+# wget -cP downloads https://ftp.gnu.org/gnu/gcc/gcc-7.2.0/gcc-7.2.0.tar.xz
+wget -cP downloads https://ftp.gnu.org/gnu/gcc/gcc-8.1.0/gcc-8.1.0.tar.xz

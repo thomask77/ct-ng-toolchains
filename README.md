@@ -5,7 +5,15 @@ build Windows and Linux toolchains for my personal use.
 
 ### Changelog
 
-2017-10-22: Updated to GCC 7.2.0. Remember to re-run ```./bootstrap.sh``` when updating from an older version.
+#### 2018-06-01
+
+Updated to GCC 8.1.0. 
+Remember to re-run ```./bootstrap.sh``` when updating from an older version.
+
+#### 2017-10-22
+
+Updated to GCC 7.2.0. 
+Remember to re-run ```./bootstrap.sh``` when updating from an older version.
 
 ### Installation
 
